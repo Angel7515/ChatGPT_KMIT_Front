@@ -1,0 +1,64 @@
+<!-- solo pagina completa de ia generativa -->
+<!-- <div class="chat-container">
+    <div class="messages">
+        <div *ngFor="let message of outputText" class="message-container">
+            <div class="message {{ message.role === 'user' ? 'user' : 'assistant' }}">
+                {{ message.content }}
+            </div>
+        </div>
+    </div>
+    <div class="input-container">
+        <textarea [(ngModel)]="inputText" (keyup.enter)="handleKeyPress()" rows="2" cols="200"></textarea>
+        <button (click)="handleKeyPress()">Enviar</button>
+    </div>
+</div>
+ -->
+<!-- solo card -->
+<!--  
+<div class="card text-center cardContainer">
+    <div class="card-header">
+        CIMMYT ASISTANT
+    </div>
+    <div class="card-body">
+
+    </div>
+    <div class="card-footer text-muted">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter your request">
+            <span class="input-group-text" id="basic-addon2">
+                <img src="../../../assets/enviar-mensaje.png">
+            </span>
+        </div>
+    </div>
+</div> -->
+
+<!-- WEB CHAT -->
+<div class="card text-center cardContainer">
+    <div class="card-header">
+        CIMMYT ASISTANT
+    </div>
+    <div class="card-body">
+        <div class="messages">
+            <div *ngFor="let message of outputText" class="message-container">
+                <div class="message {{ message.role === 'user' ? 'user' : 'assistant' }}">
+                    {{ message.content }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        <div class="input-container">
+            <span class="input-group-text" id="basic-addon2">
+                <label for="fileInput">
+                    <img id="imge_click" src="../../../assets/file.png">
+                </label>
+                <input type="file" id="fileInput" style="display:none" (change)="fileSelected($event)">
+            </span>
+            <input [(ngModel)]="inputText" type="text" class="form-control" placeholder="Enter your request"
+                (keyup.enter)="handleKeyPress()">
+            <span class="input-group-text" id="basic-addon2">
+                <img id="img_click" src="../../../assets/enviar-mensaje.png" (click)="handleKeyPress()">
+            </span>
+        </div>
+    </div>
+</div>

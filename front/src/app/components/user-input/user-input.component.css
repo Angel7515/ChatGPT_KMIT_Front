@@ -1,0 +1,75 @@
+.chat-container {
+    display: flex;
+    flex-direction: column; /* Eliminar la inversión del orden */
+    height: 100vh;
+}
+
+.messages {
+    flex-grow: 1;
+    height: 367px;
+    overflow-y: auto;
+    padding: 10px;
+    width: 280px;
+}
+
+.message-container {
+    display: flex;
+    margin-bottom: 10px;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+.message {
+    border-radius: 15px; /* Bordes redondeados para el globo */
+    padding: 10px 15px; /* Ajustar el relleno */
+    width: fit-content; /* Ancho se ajusta al contenido */
+    max-width: 80%; /* Ancho máximo para evitar que los mensajes sean demasiado anchos */
+}
+
+.user {
+    background-color: #a8c4ff;
+    align-self: flex-end; /* Alinear mensajes de usuario a la derecha */
+    margin-left: auto; /* Mover el globo hacia la derecha */
+}
+
+.assistant {
+    background-color: #b3ffb3;
+    align-self: flex-start; /* Alinear mensajes del asistente a la izquierda */
+    margin-right: auto; /* Mover el globo hacia la izquierda */
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.cardContainer {
+    width: 300px;
+    height: 500px;
+    position: fixed;
+    right: 0.7rem;
+    bottom: 0.7rem;
+}
+
+.card-header {
+    background-color: rgb(40,182,44);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: large;
+}
+
+img {
+    width: 27px;
+    height: 27px;
+}
+
+#img_click {
+    cursor: pointer;
+}
+
+.card-body {
+    height: 100px;
+}
